@@ -1,0 +1,164 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 0%;
+    --foreground: 0 0% 98%;
+
+    --card: 0 0% 3%;
+    --card-foreground: 0 0% 98%;
+
+    --popover: 0 0% 3%;
+    --popover-foreground: 0 0% 98%;
+
+    --primary: 0 90% 51%;
+    --primary-foreground: 0 0% 98%;
+
+    --secondary: 0 0% 9%;
+    --secondary-foreground: 0 0% 98%;
+
+    --muted: 0 0% 9%;
+    --muted-foreground: 0 0% 63.9%;
+
+    --accent: 0 0% 9%;
+    --accent-foreground: 0 0% 98%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 0 0% 14.9%;
+    --input: 0 0% 14.9%;
+    --ring: 0 90% 51%;
+
+    --radius: 0.5rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-black text-foreground overflow-x-hidden;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+
+  /* Custom styles */
+  .bubble {
+    @apply absolute rounded-full;
+    background: radial-gradient(circle at 30% 30%, rgba(255,255,255,0.2) 0%, rgba(255,255,255,0.05) 70%);
+    box-shadow: inset 0 0 10px rgba(255,255,255,0.3), 0 0 8px rgba(230,29,42,0.3);
+  }
+
+  .shimmer-text {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-white via-coke-silver to-white bg-[length:200%_auto] animate-shimmer;
+  }
+
+  .glass-panel {
+    @apply bg-black/30 backdrop-blur-xl border border-white/10 shadow-xl;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.2), inset 0 1px 1px rgba(255,255,255,0.08);
+  }
+
+  /* Hide scrollbar but allow scrolling */
+  body {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+  
+  body::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* Custom can perspective handling */
+  .perspective-container {
+    perspective: 2000px;
+    transform-style: preserve-3d;
+  }
+
+  .can-transform {
+    transform-style: preserve-3d;
+    will-change: transform, opacity;
+    filter: drop-shadow(0 10px 30px rgba(0,0,0,0.6));
+  }
+
+  /* Parallax effect */
+  .parallax {
+    will-change: transform;
+    transition: transform 0.1s cubic-bezier(0.2, 1, 0.3, 1);
+  }
+  
+  /* Custom animations */
+  @keyframes float {
+    0%, 100% { transform: translateY(0) rotate(0deg); }
+    50% { transform: translateY(-20px) rotate(2deg); }
+  }
+  
+  @keyframes bubble-rise {
+    0% {
+      transform: translateY(100vh) scale(0.8) rotate(0deg);
+      opacity: 0;
+    }
+    20% {
+      opacity: var(--bubble-opacity, 0.5);
+    }
+    80% {
+      opacity: var(--bubble-opacity, 0.5);
+    }
+    100% {
+      transform: translateY(-30vh) scale(1.2) rotate(var(--bubble-rotate, 360deg));
+      opacity: 0;
+    }
+  }
+  
+  @keyframes pulse-glow {
+    0% {
+      opacity: 0.6;
+      filter: blur(10rem) brightness(0.8);
+    }
+    50% {
+      opacity: 1;
+      filter: blur(15rem) brightness(1.2);
+    }
+    100% {
+      opacity: 0.6;
+      filter: blur(10rem) brightness(0.8);
+    }
+  }
+  
+  @keyframes shimmer {
+    0% { background-position: -200% 0; }
+    100% { background-position: 200% 0; }
+  }
+  
+  /* Holographic effect */
+  .holographic-text {
+    position: relative;
+    color: white;
+    text-shadow: 
+      0 0 5px rgba(255,255,255,0.5),
+      0 0 10px rgba(150,150,255,0.3);
+  }
+  
+  .holographic-text::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      90deg, 
+      transparent, 
+      rgba(255,255,255,0.2), 
+      transparent
+    );
+    z-index: -1;
+    animation: holographic-slide 3s linear infinite;
+  }
+  
+  @keyframes holographic-slide {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(100%); }
+  }
+}
