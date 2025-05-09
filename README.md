@@ -1,73 +1,44 @@
-# Welcome to your Lovable project
+# 🚀 Coke-0 — A Modern Web App by Saurabh Shinde
 
-## Project info
+Welcome to Coke-0, a sleek and high-performance modern web application built and maintained by Saurabh Shinde.
 
-**URL**: https://lovable.dev/projects/e15cf9d2-971c-4257-8b91-4966e6ca687c
+## 📌 Project Overview
 
-## How can I edit this code?
+This project is developed using cutting-edge frontend technologies and tools designed to ensure speed, scalability, and an exceptional developer experience.
 
-There are several ways of editing your application.
+## 🛠️ Technologies Used
 
-**Use Lovable**
+- Vite — Lightning-fast build tool  
+- TypeScript — Type-safe JavaScript  
+- React — Component-based frontend library  
+- shadcn/ui — Advanced, accessible UI components  
+- Tailwind CSS — Utility-first CSS framework for rapid design
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/e15cf9d2-971c-4257-8b91-4966e6ca687c) and start prompting.
+## 💻 How to Run This Project Locally
 
-Changes made via Lovable will be committed automatically to this repo.
-
-**Use your preferred IDE**
-
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
-
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+Make sure you have Node.js and npm installed.
 
 Follow these steps:
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+```bash
+# 1. Clone the repository
+git clone https://github.com/saurabhshinde1357/coke-0.git
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+# 2. Move into the project directory
+cd coke-0
 
-# Step 3: Install the necessary dependencies.
-npm i
+# 3. Install dependencies
+npm install
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
+# 4. Start the development server
 npm run dev
-```
+# Install Vercel CLI
+npm install -g vercel
 
-**Edit a file directly in GitHub**
+# Deploy
+vercel
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+---
 
-**Use GitHub Codespaces**
+Would you like me to generate a downloadable `README.md` file for you?
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
-
-## What technologies are used for this project?
-
-This project is built with:
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/e15cf9d2-971c-4257-8b91-4966e6ca687c) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
